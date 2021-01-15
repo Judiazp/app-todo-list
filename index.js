@@ -4,6 +4,7 @@ const divTodoList = document.querySelector('.todo-list');
 const txtInput = document.querySelector('.new-todo');
 const clearBtn = document.querySelector('#clear-completed');
 const ulFiltros = document.querySelector('.filters');
+const aFiltros = document.querySelectorAll('.filtro');
 
 //Clases
 
@@ -159,5 +160,28 @@ ulFiltros.addEventListener('click', (event) => {
 
     const filtro = event.target.text;
     if( !filtro ) { return; }
+    aFiltros.forEach( elem => elem.classList.remove('selected') );
+    event.target.classList.add('selected');
+
+    for( const elemento of divTodoList.children ) {
+        
+        elemento.classList.remove('hidden');
+        const completado = elemento.classList.contains('completed');
+
+        switch ( filtro ) {
+            case 'Pendientes':
+                if ( completado ) {
+                    elemento.classList.add('hidden');
+                }
+            break;
+            case 'Encontrados':
+                if ( !completado ) {
+                    elemento.classList.add('hidden');
+                }
+            break;
+        }
+
+    }
 
 });
+

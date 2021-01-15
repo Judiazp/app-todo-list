@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./style-index.css">
+		<title>Lista de mercado</title>
+	</head>
+	<body>
+		<section class="todoapp">
+			<header class="header">
+				<h1>Articulos</h1>
+				<input class="new-todo" placeholder="¿Qué necesitas?" autofocus>
+			</header>
+			<section class="main">
+				<input id="toggle-all" class="toggle-all" type="checkbox">
+				<ul class="todo-list">
+					<!-- Esto está aquí solo para mostrar la estructura de los elementos de la lista. -->
+					<!-- <li class="completed" data-id="abc">
+						<div class="view">
+							<input class="toggle" type="checkbox" checked>
+							<label>Probar JavaScript</label>
+							<button class="destroy"></button>
+						</div>
+						<input class="edit">
+					</li> -->
+				</ul>
+			</section>
+			<footer class="footer">
+				<ul class="filters">
+					<li>
+						<a class="selected filtro" class="selected" href="#/">Todos</a>
+					</li>
+					<li>
+						<a class="filtro" href="#/active">Pendientes</a>
+					</li>
+					<li>
+						<a class="filtro" href="#/completed">Encontrados</a>
+					</li>
+					<li>
+						<a class="filtro" id="clear-completed" href="#/completed">Borrar encontrados</a>
+					</li>
+				</ul>
+			</footer>
+		</section>
+		<script src="./index.js"></script>
+	</body>
+</html>
